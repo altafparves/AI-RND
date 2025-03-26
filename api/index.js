@@ -42,4 +42,4 @@ app.post("/generate", upload.single("audio_file"), async (req, res) => {
 });
 
 // Vercel needs this to export the Express app
-module.exports = app;
+module.exports = (req, res) => app(req, res);
