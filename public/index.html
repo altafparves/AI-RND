@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js API Test</title>
+</head>
+<body>
+    <h1>Node.js API Test</h1>
+    <button onclick="fetchData()">Get Message</button>
+    <p id="output"></p>
+
+    <script>
+        function fetchData() {
+            fetch("http://localhost:3000/api/message")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("output").innerText = data.message;
+                })
+                .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
