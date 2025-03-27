@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/index.js", "use": "@vercel/node" }],
+  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
   "routes": [
-    { "src": "/generate", "dest": "api/index.js" },
-    { "src": "/api/generate", "dest": "api/index.js" }, 
-    { "src": "/(.*)", "dest": "api/index.js" }
+    { "src": "/generate", "dest": "index.js" },
+    { "src": "/api/generate", "dest": "index.js" }, 
+    { "src": "/(.*)", "dest": "index.js" }
   ]
 }
